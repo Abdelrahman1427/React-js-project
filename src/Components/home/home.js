@@ -17,13 +17,13 @@ function Home() {
     
 
     return (  
-        <div className=" ">
+        <div className="body">
         <h2 className='header'>Shop List</h2>
         {products.map((product) => {
             console.log(product);
         return( 
             // width: 18rem;
-        <div className="card m-2 ">
+        <div className="card m-2">
             <img src={product.image} className ="card-img img rounded mx-auto my-3 d-block " alt="..."/>
             <div className="card-body">
                 <h5 className="card-title text-primary">{product.category}</h5>

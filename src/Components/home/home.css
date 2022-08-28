@@ -5,6 +5,10 @@ background-color: aquamarine;
 /* padding-right:100px ; */
 
 }
+.body{
+    text-align: center;
+    background-color:wheat ;
+}
 
 .card{
     width: 25rem;
