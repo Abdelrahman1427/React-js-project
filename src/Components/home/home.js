@@ -9,9 +9,9 @@ function Home() {
 
     //   const [users, setUsers] = useState([])
     const getProducts = () =>{
-        fetch('https://fakestoreapi.com/products')
+        fetch('http://localhost:8080/')
         .then(response => response.json())
-        .then(json => setProducts(json));
+        .then(json => setProducts(JSON.parse(json)));
 
     };
     
@@ -23,9 +23,9 @@ function Home() {
             console.log(product);
         return( 
             // width: 18rem;
-        <div className="card m-2">
+        <div className="card m-2" key={product.id}>
             <img src={product.image} className ="card-img img rounded mx-auto my-3 d-block " alt="..."/>
-            <div className="card-body">
+            <div className="card-body " >
                 <h5 className="card-title text-primary">{product.category}</h5>
                 <p className="card-text overflow">{product.description}</p>
                 <p className="price text-danger ">{product.price} $</p>
